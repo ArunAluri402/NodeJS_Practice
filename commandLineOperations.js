@@ -26,3 +26,7 @@ console.log(mul);
 
 let div = parseInt(val1) / parseInt(val2);
 console.log(div);
+
+//modulus of two numbers from command line
+
+console.log(parseInt(val1) % parseInt(val2));
