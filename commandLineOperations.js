@@ -7,16 +7,16 @@ console.log(op);
 
 //addition of two numbers from command line
 let val = process.argv;
-console.log (val);
+console.log(val);
 
-let val1 = process.argv[2]; 
-console.log(typeof (val1));
+let val1 = process.argv[2];
+console.log(typeof val1);
 
 let val2 = process.argv[3];
 let res = parseInt(val1) + parseInt(val2);
 
- console.log(res);
- console.log(typeof(res))
+console.log(res);
+console.log(typeof res);
 
 // subtraction of two numbers from command line
 
@@ -36,3 +36,4 @@ console.log(div);
 //modulus of two numbers from command line
 
 console.log(parseInt(val1) % parseInt(val2));
+
