@@ -6,28 +6,33 @@ let op = str + " " + str2;
 console.log(op);
 
 //addition of two numbers from command line
+let val = process.argv;
+console.log (val);
 
-let val1 = process.argv[2];
+let val1 = process.argv[2]; 
+console.log(typeof (val1));
+
 let val2 = process.argv[3];
 let res = parseInt(val1) + parseInt(val2);
-console.log(res);
-console.log(typeof res);
 
-// // subtraction of two numbers from command line
+ console.log(res);
+ console.log(typeof(res))
 
-// let sub = parseInt(val2) - parseInt(val1);
-// console.log(sub);
+// subtraction of two numbers from command line
 
-// // multiplication of two numbers from command line
+let sub = parseInt(val2) - parseInt(val1);
+console.log(sub);
 
-// let mul = parseInt(val1) * parseInt(val2);
-// console.log(mul);
+// multiplication of two numbers from command line
 
-// // divison of two numbers from command line
+let mul = parseInt(val1) * parseInt(val2);
+console.log(mul);
 
-// let div = parseInt(val1) / parseInt(val2);
-// console.log(div);
+// divison of two numbers from command line
 
-// //modulus of two numbers from command line
+let div = parseInt(val1) / parseInt(val2);
+console.log(div);
 
-// console.log(parseInt(val1) % parseInt(val2));
+//modulus of two numbers from command line
+
+console.log(parseInt(val1) % parseInt(val2));
