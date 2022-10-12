@@ -11,22 +11,23 @@ let val1 = process.argv[2];
 let val2 = process.argv[3];
 let res = parseInt(val1) + parseInt(val2);
 console.log(res);
+console.log(typeof res);
 
-// subtraction of two numbers from command line
+// // subtraction of two numbers from command line
 
-let sub = parseInt(val2) - parseInt(val1);
-console.log(sub);
+// let sub = parseInt(val2) - parseInt(val1);
+// console.log(sub);
 
-// multiplication of two numbers from command line
+// // multiplication of two numbers from command line
 
-let mul = parseInt(val1) * parseInt(val2);
-console.log(mul);
+// let mul = parseInt(val1) * parseInt(val2);
+// console.log(mul);
 
-// divison of two numbers from command line
+// // divison of two numbers from command line
 
-let div = parseInt(val1) / parseInt(val2);
-console.log(div);
+// let div = parseInt(val1) / parseInt(val2);
+// console.log(div);
 
-//modulus of two numbers from command line
+// //modulus of two numbers from command line
 
-console.log(parseInt(val1) % parseInt(val2));
+// console.log(parseInt(val1) % parseInt(val2));
