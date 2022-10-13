@@ -14,9 +14,10 @@ const slicedString = str.slice(2, 9);
 console.log(slicedString);
 
 //replace --> method to replace a particular portion of string
-const str3 = "I am from Hyderabad";
 const replacedString = str.replace("Prakash", "Aluri");
 console.log(replacedString);
+
+const str3 = "I am from Hyderabad";
 const replacedstr = str3.replace("Hyderabad", "Bangalore");
 console.log(replacedstr);
 
