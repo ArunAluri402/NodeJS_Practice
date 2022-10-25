@@ -1,4 +1,4 @@
-//functions -- 20 programs 
+//functions -- 20 programs
 
 //function to multiply
 function abc(a, b) {
@@ -75,8 +75,30 @@ function maxElement(arr) {
 console.log(maxElement([1, 5, 8, 9, 44, 56, 101]));
 
 //filter of odd numbers from an array
-const filterNum = (arr) => {
+function filterNum(arr) {
   const result = arr.filter((num) => num % 2 === 1);
   return result;
-};
+}
 console.log(filterNum([1, 5, 3, 4, 6, 8, 10, 12, 13]));
+
+function multiple(arr) {
+  let res = 1;
+  for (let i = 0; (len = arr.length), i < len; i++) {
+    res = res * arr[i];
+  }
+  return res;
+}
+
+console.log(multiple([1, 5, 6, 3]));
+
+//array division
+function div(arr) {
+  let res = 1;
+
+  for (let i in arr) {
+    res = res / arr[i];
+  }
+  return res.toFixed(2);
+}
+
+console.log(div([1, 5, 6]));
