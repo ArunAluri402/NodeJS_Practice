@@ -35,3 +35,36 @@ const sayName = (name) => {
 setTimeout(greets, 2000, "Arun Aluri", sayName);
 
 /******************************/
+
+const mainFunction = (callback) => {
+  setTimeout(() => {
+    callback([2, 3, 4]);
+  }, 2000);
+};
+
+// Add function
+const add = (array) => {
+  let sum = 0;
+  for (let i of array) {
+    sum += i;
+  }
+  console.log(sum);
+};
+
+// Calling main function
+mainFunction(add);
+
+/******************************/
+
+const second = () => {
+  setTimeout(() => {
+    console.log("Takes 2 Seconds");
+  }, 2000);
+};
+
+const first = () => {
+  console.log("First func called");
+  second();
+  console.log("the code still running");
+};
+first();
