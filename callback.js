@@ -67,4 +67,4 @@ const first = () => {
   second();
   console.log("the code still running");
 };
-first();
+first(second);
