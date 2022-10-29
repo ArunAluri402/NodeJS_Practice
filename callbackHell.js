@@ -56,8 +56,11 @@ const mul = (x, y, callbackFunc) => {
   }, 5000);
 };
 
-const Prime = (res, flag = true, callbackFunc) => {
-  for (let i = 0; i <= res - 1; i++) {
+const Prime = (res, flag = false, callbackFunc) => {
+  if (res == 2) {
+    flag = true;
+  }
+  for (let i = 2; i <= Math.sqrt(res); i++) {
     if (res % i == 0) {
       flag = false;
       break;
@@ -75,7 +78,7 @@ const Prime = (res, flag = true, callbackFunc) => {
   }
 };
 
-mul(10, 11, (mul) => {
+mul(1, 9, (mul) => {
   console.log("Multiplication of X and Y is : ", mul);
   Prime(mul, (val) => {
     console.log(val);
