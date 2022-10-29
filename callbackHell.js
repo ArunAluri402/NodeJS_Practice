@@ -8,8 +8,9 @@ const sample2 = () => {
   console.log("sample2 function");
 };
 sample(sample2);
+console.log("/************************************/");
 
-/***********************/
+/**********************************************/
 const funcAdd = (a, b, callback) => {
   setTimeout(() => {
     const res = a + b;
@@ -31,9 +32,52 @@ funcAdd(10, 25, (result) => {
   console.log(`result = ${result}`);
   if (result % 2 === 0) {
     console.log("Even Number");
-    secondFunc(result, "Even", (evenOrodd) => console.log(evenOrodd));
+    secondFunc(result, "Even", (evenOrodd) =>
+      console.log("Final result is :", evenOrodd)
+    );
   } else {
     console.log("odd number");
-    secondFunc(result, "Odd", (evenOrodd) => console.log(evenOrodd));
+    secondFunc(result, "Odd", (evenOrodd) =>
+      console.log("Final result is :", evenOrodd)
+    );
   }
+});
+setTimeout(() => {
+  console.log("/************************************/");
+}, 2000);
+/**********************************************/
+
+//program to find multiplication of number and result is prime or not, if prime square of number or else cube of number and to print result
+
+const mul = (x, y, callbackFunc) => {
+  setTimeout(() => {
+    const res = x * y;
+    callbackFunc(res);
+  }, 5000);
+};
+
+const Prime = (res, flag = true, callbackFunc) => {
+  for (let i = 0; i <= res - 1; i++) {
+    if (res % i == 0) {
+      flag = false;
+      break;
+    }
+
+    if (flag == true) {
+      console.log(`${res} is a Prime Number`);
+      res = res * res;
+      console.log("square of result is", res);
+    } else {
+      console.log(`${res} is not a prime Number`);
+      res = res * res * res;
+      console.log("Cube of result is ", res);
+    }
+  }
+};
+
+mul(10, 11, (mul) => {
+  console.log("Multiplication of X and Y is : ", mul);
+  Prime(mul, (val) => {
+    console.log(val);
+  });
 });
