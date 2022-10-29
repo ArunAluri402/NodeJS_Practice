@@ -10,19 +10,30 @@ const sample2 = () => {
 sample(sample2);
 
 /***********************/
+const funcAdd = (a, b, callback) => {
+  setTimeout(() => {
+    const res = a + b;
+    callback(res);
+  }, 2000);
+};
 
-const check = (a, b, add) => {
-  if (a || b != null) {
-    console.log(`A and B values are = ${a},${b}`);
+const secondFunc = (num, type, callback) => {
+  if (type === "Even") {
+    num = num * 2;
+    callback(num);
   } else {
-    console.log("Either A or B values are null");
+    num = num * 3;
+    callback(num);
   }
-
-  add(2, 8);
 };
 
-const add = (a, b, res) => {
-  res = a + b;
-  console.log(res);
-};
-add(check);
+funcAdd(10, 25, (result) => {
+  console.log(`result = ${result}`);
+  if (result % 2 === 0) {
+    console.log("Even Number");
+    secondFunc(result, "Even", (evenOrodd) => console.log(evenOrodd));
+  } else {
+    console.log("odd number");
+    secondFunc(result, "Odd", (evenOrodd) => console.log(evenOrodd));
+  }
+});
